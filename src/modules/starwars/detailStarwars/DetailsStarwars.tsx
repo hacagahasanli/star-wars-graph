@@ -45,7 +45,7 @@ const DetailStarwars = () => {
       </Row>
       <Col spacing={6}>
         <Typo variant="title-lg">{characterDetails?.name}</Typo>
-        <div className="grid py-4 md:py-0 grid-cols-3 md:grid-cols-8 gap-4 md:gap-0">
+        <div className="grid py-4 md:py-6 grid-cols-3 md:grid-cols-8 gap-4 md:gap-0">
           <InfoLabel alignItems={AlignItems.CENTER} label="Gender">
             {characterDetails?.gender}
           </InfoLabel>
