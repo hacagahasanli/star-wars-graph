@@ -1,4 +1,4 @@
-import { withProviders } from "./providers";
+import { withProviders } from "./providers/hocs";
 
 import AppRouting from "../routing/AppRouting";
 

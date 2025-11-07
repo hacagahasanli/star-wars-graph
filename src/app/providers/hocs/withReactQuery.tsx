@@ -1,8 +1,10 @@
 import { QueryClient } from "@tanstack/react-query";
+
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
+
 import { createLocalStoragePersister } from "~/shared/lib/utils/StorageUtils";
 
-import type { HOC } from "./types/HOC";
+import type { HOC } from "../types/HOC";
 
 export const queryClient: QueryClient = new QueryClient({
   defaultOptions: {

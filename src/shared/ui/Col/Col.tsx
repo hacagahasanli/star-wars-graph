@@ -1,14 +1,14 @@
-import { type ElementType } from "react";
-
 import cn from "~/shared/lib/helpers/classnames";
 
 import AlignItems from "~/resources/constants/AlignItems";
 import JustifyContent from "~/resources/constants/JustifyContent";
 
+import  HtmlTags from "~/resources/constants/HtmlTags";
+
 import type { ILayout } from "~/shared/types/ILayout";
 
-interface IColProps<TAs extends ElementType = "div"> extends ILayout {
-  as?: TAs;
+interface IColProps extends ILayout {
+  as?: HtmlTags;
   size?: string;
   mobileSpacing?: number;
 }
@@ -19,9 +19,9 @@ const Col = ({
   id = "",
   children,
   className,
-  as = "div",
   spacing = 0,
   mobileSpacing,
+  as = HtmlTags.DIV,
   alignItems = AlignItems.STRETCH,
   justifyContent = JustifyContent.FLEX_START,
   ...rest

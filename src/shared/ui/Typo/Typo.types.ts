@@ -1,11 +1,11 @@
-import type { ElementType } from "react";
+import type HtmlTags from "~/resources/constants/HtmlTags";
 
 export type TypoVariant = "body-xs" | "body-base" | "title-lg" | "label";
 
 export type TypoColor = "gray" | "white";
 
-export interface TypoProps<TAs extends ElementType = "span"> {
-  as?: TAs;
+export interface TypoProps {
+  as?: HtmlTags;
   variant?: TypoVariant;
   color?: TypoColor;
   className?: string;
