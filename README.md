@@ -40,7 +40,7 @@ The project includes a `.env` file with these settings:
 
 ```
 REACT_APP_BASE_URL=https://swapi.dev
-REACT_APP_ENABLE_MOCKS=true
+REACT_APP_ENABLE_MOCKS=false
 ```
 
 You can modify `REACT_APP_ENABLE_MOCKS` to `false` if you want to use the real API instead of mocked data.
