@@ -1,9 +1,9 @@
 /* Grid utilities */
-@source inline('{sm:,md:,lg:,xl:,}grid-cols-{1,2,3,4,5,6,7,8,9,10,11,12}');
+@source inline('{xs:,sm:,md:,lg:,xl:,}grid-cols-{1,2,3,4,5,6,7,8,9,10,11,12}');
 @source inline('{sm:,md:,lg:,xl:,}col-span-{1,2,3,4,5,6,7,8,9,10,11,12}');
 
 /* Gap utilities */
-@source inline('{xs:,lg:, md:,}gap-{1,1.5,2,2.5,3,4,5,6,7,8,11,16}');
+@source inline('{xs:, lg:, sm:, md:,}gap-{1,1.5,2,2.5,3,4,5,6,7,8,11,16}');
 @source inline('gap-{1,1.5,2,2.5,3,4,5,6,7,8,11,16}');
 
 /* Z-index utilities */

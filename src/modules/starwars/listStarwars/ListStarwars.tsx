@@ -1,8 +1,7 @@
-import Grid from "~/shared/ui/Grid/Grid";
+import Show from "~/shared/ui/Show/Show";
 
 import StarwarsCard from "./ui/StarwarsCard/StarwarsCard";
 import useCharactersQuery from "./api/queries/useCharactersQuery";
-import Show from "~/shared/ui/Show/Show";
 import StarwarsCardSkeleton from "./ui/StarwarsCardSkeleton/StarwarsCardSkeleton";
 
 const ListStartWars = () => {
@@ -17,7 +16,7 @@ const ListStartWars = () => {
   const isNotEmpty = !!charactersList?.length;
 
   return (
-    <Grid container lg={4} md={3} sm={2} xs={1} spacing={4}>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       <Show when={isCharactersFetching}>
         <StarwarsCardSkeleton />
       </Show>
@@ -26,7 +25,7 @@ const ListStartWars = () => {
           <StarwarsCard id={idx + 1} character={character} />
         ))}
       </Show>
-    </Grid>
+    </div>
   );
 };
 
