@@ -24,8 +24,8 @@ const Fallback: FC<IFallbackProps> = ({ type = FALLBACK_TYPE.PAGE }) => {
     >
       <Show when={isPageFallback}>
         <div className="relative h-44 flex items-center justify-start">
-          <div className="absolute overflowBox 1.6s ease-in-out infinite w-72 h-32 bg-white opacity-90" />
-          <span className="text-8xl font-bold text-slate-950">Starwars</span>
+          {/* <div className="absolute animate-overflowBox 1.6s ease-in-out infinite w-72 h-32 bg-slate-600/70 opacity-90" /> */}
+          <span className="text-8xl font-bold text-black-50">Starwars</span>
         </div>
       </Show>
 

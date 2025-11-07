@@ -10,7 +10,7 @@ interface FilmNodeProps {
 
 const FilmNode = ({ data }: FilmNodeProps) => {
   return (
-    <CardNode>
+    <CardNode tagLabel="Film">
       <InfoLabel label="Title">{data.title}</InfoLabel>
       <InfoLabel label="Episode">{data.episode_id}</InfoLabel>
       <InfoLabel label="Director">{data.director}</InfoLabel>

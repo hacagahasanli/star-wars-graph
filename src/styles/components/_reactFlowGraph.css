@@ -1,3 +1,7 @@
 .react-flow__panel {
-  display: none;
+  display: none !important;
+}
+
+.react-flow__controls {
+  display: none !important;
 }

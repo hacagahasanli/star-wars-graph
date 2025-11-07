@@ -10,7 +10,7 @@ interface VehicleNodeProps {
 
 const VehicleNode = ({ data }: VehicleNodeProps) => {
   return (
-    <CardNode>
+    <CardNode tagLabel="Vehicle">
       <InfoLabel label="Name">{data.name}</InfoLabel>
       <InfoLabel label="Model">{data.model}</InfoLabel>
       <InfoLabel label="Class">{data.vehicle_class}</InfoLabel>

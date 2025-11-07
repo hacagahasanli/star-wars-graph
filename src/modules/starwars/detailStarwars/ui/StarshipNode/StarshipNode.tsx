@@ -10,7 +10,7 @@ interface StarshipNodeProps {
 
 const StarshipNode = ({ data }: StarshipNodeProps) => {
   return (
-    <CardNode>
+    <CardNode tagLabel="Starship">
       <InfoLabel label="Name">{data.name}</InfoLabel>
       <InfoLabel label="Model">{data.model}</InfoLabel>
       <InfoLabel label="Class">{data.starship_class}</InfoLabel>

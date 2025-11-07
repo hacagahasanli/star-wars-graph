@@ -10,7 +10,7 @@ interface SpeciesNodeProps {
 
 const SpeciesNode = ({ data }: SpeciesNodeProps) => {
   return (
-    <CardNode>
+    <CardNode tagLabel="Species">
       <InfoLabel label="Name">{data.name}</InfoLabel>
       <InfoLabel label="Classification">{data.classification}</InfoLabel>
       <InfoLabel label="Designation">{data.designation}</InfoLabel>
