@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    "baseUrl": ".",
+
+    // Define shortcuts for importing files
+    "paths": {
+      // Recommended ( looks simple )
+      // ----- First approach: ~ alias -----
+      "~/*": ["src/*"], // General alias for src folder
+      "~/auth/*": ["src/modules/auth/*"], // Auth-related module
+      "~/admin/*": ["src/modules/admin/*"], // Admin dashboard module
+      "~/landing/*": ["src/modules/landing/*"], // Landing page module
+      "~/dashboard/*": ["src/modules/dashboard/*"], // User dashboard module
+
+      // ----- Second approach: @ aliases -----
+      "@ui/*": ["src/shared/ui/*"], // Shared UI components
+      "@styles/*": ["src/styles/*"], // Global styles & SCSS
+      "@lib/*": ["src/shared/lib/*"], // Utility functions & helpers
+      "@modules/*": ["src/modules/*"], // Shortcut to all modules
+      "@types/*": ["src/shared/types/*"], // Global TypeScript types
+      "@hooks/*": ["src/shared/hooks/*"], // Custom React hooks
+      "@layouts/*": ["src/shared/layouts/*"], // Layout components
+      "@services/*": ["src/shared/services/*"], // API & service layer
+      "@constants/*": ["src/resources/constants/*"] // Application constants
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src"]
+}

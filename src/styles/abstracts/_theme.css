@@ -1,0 +1,18 @@
+@theme {
+  /* Animation */
+  --animate-overflow-box: overflow-box 1.6s ease-in-out infinite;
+
+  /* Shadows */
+  --shadow-img: 0 11px 16.8px 0 #00000040;
+
+  /* Colors */
+  --color-black: #171717;
+  --color-white: #ffffff;
+  --color-gray-90: #909090;
+  --color-gray-80: #232324;
+  --color-gray-70: #414141;
+  --color-black-50: #ffffff0f;
+
+  /* Sizes */
+  --layout-width: 1240px;
+}

@@ -1,0 +1,12 @@
+@keyframes overflowBox {
+  0% {
+    transform: translateX(-350px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}
+
+.animate-overflowBox {
+  animation: overflowBox 1.6s ease-in-out infinite;
+}

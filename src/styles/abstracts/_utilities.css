@@ -1,0 +1,79 @@
+@tailwind utilities;
+
+@layer utilities {
+  /* Flex Center */
+  .c-flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  /* Column Layouts */
+  .c-flex-col {
+    @apply flex flex-col items-start justify-start;
+  }
+
+  .c-flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .c-flex-col-items-center {
+    @apply flex flex-col items-center justify-start;
+  }
+
+  .c-flex-col-content-center {
+    @apply flex flex-col justify-center w-full;
+  }
+
+  /* Justify Variants */
+  .c-flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .c-flex-around {
+    @apply flex items-center justify-around;
+  }
+
+  .c-flex-evenly {
+    @apply flex items-center justify-evenly;
+  }
+
+  .c-flex-start {
+    @apply flex items-center justify-start;
+  }
+
+  .c-flex-end {
+    @apply flex items-center justify-end;
+  }
+
+  /* Row and Column Flex */
+  .c-flex-row {
+    @apply flex flex-row;
+  }
+
+  .c-flex-row-center {
+    @apply flex flex-row items-center justify-center;
+  }
+
+  .c-flex-col-between {
+    @apply flex flex-col justify-between;
+  }
+
+  .c-flex-col-around {
+    @apply flex flex-col justify-around;
+  }
+
+  .c-padding {
+    @apply px-8;
+  }
+
+  @media (max-width: 1280px) {
+    .c-padding {
+      @apply px-6;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .c-padding {
+      @apply px-3;
+    }
+  }
+}

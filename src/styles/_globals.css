@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@import "./abstracts/_globals.css";
+@import "./components/_globals.css";
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  background-color: #171717;
+}
