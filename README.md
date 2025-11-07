@@ -1,73 +1,111 @@
-# React + TypeScript + Vite
+# Star Wars Graph
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that visualizes Star Wars characters and their relationships through an interactive graph interface. Browse through characters from the Star Wars universe and explore their connections to films, starships, vehicles, and species.
 
-Currently, two official plugins are available:
+## What This Project Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Displays a grid of Star Wars characters
+- Shows detailed information about each character
+- Visualizes relationships between characters and their associated entities (films, starships, vehicles, species) using an interactive flow graph
+- Fetches data from the Star Wars API (SWAPI)
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **TailwindCSS** - Styling
+- **React Router** - Navigation
+- **TanStack Query** - Data fetching and caching
+- **XYFlow** - Interactive graph visualization
+- **Axios** - HTTP client
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Make sure you have one of these installed:
+- **Node.js** (v18 or higher)
+- **npm** (comes with Node.js)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 1. Install Dependencies
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+yarn
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Environment Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The project includes a `.env` file with these settings:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+REACT_APP_BASE_URL=https://swapi.dev
+REACT_APP_ENABLE_MOCKS=true
+```
+
+You can modify `REACT_APP_ENABLE_MOCKS` to `false` if you want to use the real API instead of mocked data.
+
+### 3. Run the Development Server
+
+```bash
+yarn dev
+```
+
+The app will open at `http://localhost:5173` (or another port if 5173 is busy).
+
+### 4. Build for Production
+
+```bash
+yarn build
+```
+
+This creates an optimized production build in the `dist` folder.
+
+### 5. Preview Production Build
+
+```bash
+yarn preview
+```
+
+Runs the production build locally so you can test it before deployment.
+
+## Available Scripts
+
+| Command | What It Does |
+|---------|-------------|
+| `npm run dev` | Starts development server with hot reload |
+| `npm run build` | Creates production-ready build |
+| `npm run preview` | Previews the production build locally |
+| `npm run lint` | Checks code for issues using ESLint |
+
+## Project Structure
+
+```
+src/
+├── app/              # App-level configuration (providers, root component)
+├── business/         # Business logic and UI components
+├── modules/          # Feature modules
+│   └── starwars/     # Star Wars feature
+│       ├── listStarwars/    # Character list view
+│       ├── detailStarwars/  # Character detail view with graph
+│       ├── models/          # Data models
+│       └── shared/          # Shared utilities for this module
+├── resources/        # Static resources (icons, constants)
+├── routing/          # Route definitions
+├── shared/           # Shared UI components and utilities
+└── styles/           # Global styles
+```
+
+## How to Use
+
+1. Start the dev server
+2. You'll see a grid of Star Wars characters
+3. Click on any character card to view detailed information
+4. The detail page shows an interactive graph of relationships
+5. Use the back button to return to the character list
+
+## Notes
+
+- The app uses TanStack Query for data caching, so subsequent visits will be faster
+- Mock mode is disabled by default for development
+- The graph visualization uses the Dagre layout algorithm for automatic positioning
