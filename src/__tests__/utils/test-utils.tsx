@@ -5,9 +5,20 @@ import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
 import {
+  act,
+  cleanup,
+  renderHook,
   type RenderOptions,
   render as rtlRender,
 } from "@testing-library/react";
+
+import {
+  screen,
+  within,
+  waitFor,
+  fireEvent,
+  waitForElementToBeRemoved,
+} from "@testing-library/dom";
 
 import { compose } from "~/shared/lib/utils/FunctionUtils";
 
@@ -49,4 +60,4 @@ export {
   fireEvent,
   renderHook,
   waitForElementToBeRemoved,
-} from "@testing-library/react";
+};
